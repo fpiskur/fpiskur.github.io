@@ -1,0 +1,282 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+    	<meta name="author" content="">
+
+		<title>Farm Manager</title>
+
+		<!-- Custom Font -->
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+	    <!-- Custom CSS -->
+	    <link href="farm-manager-style.css" rel="stylesheet">
+
+	    <!-- Scripts -->
+	    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+
+	</head>
+
+	<body>
+
+		<div class="main-container">
+
+
+			<!-- ############## TOP CONTAINER ############### -->
+			<div class="grid-container top">
+				
+				<div class="grid-item top cash"><p id="cash">$ 300</p></div>
+				<div class="grid-item top time" id="game-clock"><p>Y1 / M1</p></div>
+				<div class="grid-item top speed">
+
+					<p>
+						<a href="#" value="pause" onclick="stopGameClock();"><img src="imgs/pause-inactive-sm.png" /></a>
+						<a href="#" value="play" onclick="gameClock(1000);"><img src="imgs/play-active-sm.png" /></a>
+						<a href="#" value="2xspeed" onclick="gameClock(500);"><img src="imgs/2xspeed-inactive-sm.png" /></a>
+						<a href="#" value="4xspeed" onclick="gameClock(250);"><img src="imgs/4xspeed-inactive-sm.png" /></a>
+					</p>
+
+				</div>
+
+			</div> <!-- /end TOP CONTAINER -->
+
+
+			<!-- ############# FARM CONTAINER ############## -->
+			<div class="grid-container farm">
+
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+				<div class="grid-item farm span-2 home"></div>
+				<a href="#" class="grid-item farm"></a>
+				<a href="#" class="grid-item farm"></a>
+
+			</div> <!-- /end FARM CONTAINER -->
+
+
+			<!-- ################ BUY CONTAINER ################ -->
+			<div class="grid-container buy hidden">
+
+				<div class="grid-item buy wheat">
+					<table>
+						<thead>
+							<tr>
+								<th colspan="2">Wheat</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="plot-price">
+								<td>$/plot:</td>
+								<td>100</td>
+							</tr>
+							<tr class="growth-rate">
+								<td>growth:</td>
+								<td>6 mo</td>
+							</tr>
+							<tr class="income-per-harvest">
+								<td>$/harv.:</td>
+								<td>51-55</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="2">
+									<a class="buy-btn" href="#" value="wheat">BUY</a>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+				<div class="grid-item buy carrot">
+					<table>
+						<thead>
+							<tr>
+								<th colspan="2">Carrot</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="plot-price">
+								<td>$/plot:</td>
+								<td>370</td>
+							</tr>
+							<tr class="growth-rate">
+								<td>growth:</td>
+								<td>6 mo</td>
+							</tr>
+							<tr class="income-per-harvest">
+								<td>$/harv.:</td>
+								<td>87-95</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="2">
+									<a class="buy-btn" href="#" value="carrot">BUY</a>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+				<div class="grid-item buy potato">
+					<table>
+						<thead>
+							<tr>
+								<th colspan="2">Potato</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="plot-price">
+								<td>$/plot:</td>
+								<td>750</td>
+							</tr>
+							<tr class="growth-rate">
+								<td>growth:</td>
+								<td>7 mo</td>
+							</tr>
+							<tr class="income-per-harvest">
+								<td>$/harv.:</td>
+								<td>154-169</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="2">
+									<a class="buy-btn" href="#" value="potato">BUY</a>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+				<div class="grid-item buy tomato">
+					<table>
+						<thead>
+							<tr>
+								<th colspan="2">Tomato</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="plot-price">
+								<td>$/plot:</td>
+								<td>1500</td>
+							</tr>
+							<tr class="growth-rate">
+								<td>growth:</td>
+								<td>9 mo</td>
+							</tr>
+							<tr class="income-per-harvest">
+								<td>$/harv.:</td>
+								<td>308-338</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="2">
+									<a class="buy-btn" href="#" value="tomato">BUY</a>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+				<div class="grid-item buy apple">
+					<table>
+						<thead>
+							<tr>
+								<th colspan="2">Apple</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="plot-price">
+								<td>$/plot:</td>
+								<td>6300</td>
+							</tr>
+							<tr class="growth-rate">
+								<td>growth:</td>
+								<td>12 mo</td>
+							</tr>
+							<tr class="income-per-harvest">
+								<td>$/harv.:</td>
+								<td>656-720</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="2">
+									<a class="buy-btn" href="#" value="apple">BUY</a>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+
+			</div> <!-- /end BUY CONTAINER -->
+
+
+			<!-- ############## OPTIONS CONTAINER ############# -->
+			<div class="grid-container options hidden">
+				
+				<div class="grid-item options selected-crop">
+
+					<h3 id="options-header"></h3>
+
+				</div>
+
+				<div class="grid-item options water-crop">
+					
+					<a href="#" id="water-crop"><img src="imgs/water-btn.png" ondragstart="return false;" /></a>
+
+				</div>
+
+				<div class="grid-item options fertilize-crop">
+					
+					<a href="#" id="fertilize-crop"><img src="imgs/fertilize-btn.png" ondragstart="return false;" /><span id="fertilize-price"></span></a>
+
+				</div>
+
+				<div class="grid-item options delete-crop">
+					
+					<a href="#" id="delete-crop"><img src="imgs/delete-btn.png" ondragstart="return false;" /></a>
+
+				</div>
+
+				<div class="grid-item options crop-info">
+					
+					<p>$/plot: <span id="plot-info-price"></span> &nbsp;&nbsp;&nbsp;growth: <span id="plot-info-growth"></span> mo &nbsp;&nbsp;&nbsp;$/harvest: <span id="plot-info-harvest"></span></p>
+
+				</div>
+
+			</div> <!-- /end OPTIONS CONTAINER -->
+
+		</div>
+
+	<script src="plot.js"></script>
+	<script src="game-mechanics.js"></script>
+	<script src="timer.js"></script>
+
+	</body>
+
+</html>

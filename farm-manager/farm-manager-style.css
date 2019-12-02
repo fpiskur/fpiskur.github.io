@@ -1,0 +1,283 @@
+@charset "UTF-8";
+
+/*########## VARIABLES #############*/
+
+    :root {
+
+        --empty-plot: #458417;
+        --wet-plot: #4D290E;
+        --dry-plot: #99673F;
+        --fertilized-plot: #313131;
+
+        --neutral-border: #482E17;
+        --harvest-border: #3FB912;
+    }
+                       
+/*##################################*/
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+table {
+    width: 100%;
+}
+
+a:focus {
+    outline: none;
+}
+
+.main-container {
+    text-align: center;
+}
+
+.grid-container.top {
+    display: grid;
+    justify-content: center;
+    grid-gap: 10px;
+    grid-template-columns: 1fr max-content 1fr;
+    width: 624px;
+    margin: 0 auto;
+}
+
+.grid-container.farm {
+    display: inline-grid;
+    margin-top: 5px;
+    grid-gap: 12px;
+    grid-template-columns: auto auto auto auto auto auto;
+    background: transparent;
+    background-image: url('imgs/textures/grass_path_top.jpg');
+    padding: 12px;
+    border-radius: 23px;
+}
+
+.grid-container.buy {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto auto auto auto;
+    width: 624px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.grid-container.options {
+    display: grid;
+    grid-row-gap: 12px;
+    grid-column-gap: 20px;
+    grid-template-areas:
+        'header header header'
+        'water fertilize delete'
+        'info info info';
+    width: 624px;
+    margin: 0 auto;
+    line-height: 1em;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.grid-item.top {
+    display: flex;
+    height: 30px;
+    align-items: flex-end;
+}
+
+.grid-item.top p {
+    margin: 0px;
+    line-height: 1em;
+}
+
+.grid-item.top.cash {
+    justify-content: start;
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFCD00;
+    text-shadow:
+       -1px -1px 0 #5B2A00,  
+        1px -1px 0 #5B2A00,
+        -1px 1px 0 #5B2A00,
+         1px 1px 0 #5B2A00;
+}
+
+.grid-item.top.time {
+    justify-content: center;
+    font-weight: bold;
+    font-size: 27px;
+    color: #563C1E;
+}
+
+.grid-item.top.speed {
+    text-align: right;
+}
+
+.grid-item.top.speed p {
+    width: 100%;
+}
+
+/*.grid-item.top.speed p a:focus {
+    outline: none;
+}*/
+
+.grid-item.top.speed img {
+    height: 30px;
+    margin-bottom: -2px;
+    image-rendering: ;
+}
+
+.grid-item.farm {
+    display: block;
+    background-color: var(--empty-plot, #458417);
+    border: 5px solid var(--neutral-border, #482E17);
+    border-radius: 15px;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    cursor: pointer;
+
+    /*user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;*/
+}
+
+.grid-item.span-2 {
+    grid-area: 4 / 3 / 4 / span 2;
+    width: auto;
+    height: auto;
+}
+
+/*.grid-item.farm img {
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}*/
+
+.grid-item.farm.home {
+    border: none;
+    background-color: transparent;
+    background-image: url('imgs/home-farm.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+.grid-item.farm.selected {
+    border-color: #FFFFFF;
+}
+
+.grid-item.farm:focus {
+    outline: none;
+}
+
+.grid-item.farm.dry {
+    background: var(--dry-plot, #99673F);
+    background-image: url('imgs/textures/farmland_dry.jpg');
+}
+
+.grid-item.farm.wet {
+    background: var(--wet-plot, #4D290E);
+    background-image: url('imgs/textures/farmland_wet.jpg');
+}
+
+.grid-item.farm.fertilized {
+    background: var(--fertilized-plot, #313131);
+    background-image: url('imgs/textures/farmland_fertalized.jpg');
+}
+
+.grid-item.farm.harvest {
+    border-color: var(--harvest-border, #3FB912);
+}
+
+.grid-item.buy {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.grid-item.buy table thead th {
+    text-align: center;
+    text-transform: uppercase;
+    color: #5B2A00;
+}
+
+.grid-item.buy table tbody tr.plot-price {
+    color: #8F0000;
+}
+
+.grid-item.buy table tbody tr.growth-rate {
+    color: #5B2A00;
+}
+
+.grid-item.buy table tbody tr.income-per-harvest {
+    color: #C38A00;
+}
+
+.grid-item.buy table tfoot tr {
+    line-height: 2.2em;
+}
+
+.buy-btn {
+    background-color: #589706;
+    border: 2px solid #4E7C12;
+    border-radius: 15px;
+    padding: 4px 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 12px;
+}
+
+.grid-item.options {
+    color: #5B2A00;
+}
+
+.grid-item.options.crop-info p {
+    margin: 0px;
+}
+
+.grid-item.options.selected-crop h3 {
+    margin: 0px;
+    margin-top: 10px;
+}
+
+.grid-item.options.fertilize-crop {
+    position: relative;
+}
+
+#fertilize-price {
+    display: inline-block;
+    position: absolute;
+    color: #8F0000;
+    font-size: 20px;
+    font-weight: bold;
+    bottom: 5px;
+    right: 20px;
+}
+
+.grid-item.options.selected-crop { grid-area: header; }
+.grid-item.options.water-crop { grid-area: water; }
+.grid-item.options.fertilize-crop { grid-area: fertilize; }
+.grid-item.options.delete-crop { grid-area: delete; }
+.grid-item.options.crop-info { grid-area: info; }
+
+/* ############# MISC ############## */
+
+.hidden {
+    display: none !important;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
+/*###################################*/
