@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Visual polirhythmic metronome">
+    <meta name="author" content="Filip Piškur">
+
+    <title>Polirhythm</title>
+
+    <link rel="stylesheet" type="text/css" href="style-polirhythm.css">
+
+</head>
+<body>
+
+    <div id="randomizer">
+        <p><span id="mjera">click me</span></p>
+        <p><span id="progresija"><small>for a random suggestion</small></span></p>
+    </div>
+
+    <div id="wrap">
+
+        <div id="controls">
+
+            <div id="ritam-wrap">
+                1st rhythm: <select id="rhythm-1"></select>
+                2nd rhythm: <select id="rhythm-2"></select>
+                3rd rhythm: <select id="rhythm-3"></select>
+                <input id="render-btn" type="button" name="render" value="render">
+            </div>
+
+            <div id="tempo-wrap">
+                Tempo: <input id="tempo" type="text" name="tempo"><br>
+                <input id="start-btn" type="button" name="submit" value="start">
+                <input id="stop-btn" type="button" name="stop" value="stop">
+                <input id="mute-btn" type="button" name="mute" value="sound">
+            </div>
+            
+        </div>
+
+        <div id="result"></div>
+
+    </div>
+
+    <!-- jQuery, jQuery UI -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script-polirhythm.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+body {
+    margin: 0px;
+    font-size: 16px;
+}
+
+#wrap {
+    margin: 40px auto 0px;
+    text-align: center;
+}
+
+.line {
+    background-color: #90ff9d;
+    height: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto 0px;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #1c6957;
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+}
+
+.red-bg {
+    background-color: #ff152d;
+}
+
+.yellow-bg {
+    background-color: #ffec7c;
+}
+
+.yellow-shadow {
+    -webkit-box-shadow: inset 0px 0px 0px 5px #ffec7c;
+    -moz-box-shadow: inset 0px 0px 0px 5px #ffec7c;
+    box-shadow: inset 0px 0px 0px 5px #ffec7c;
+}
+
+.big {
+    width: 70px;
+    height: 70px;
+    margin-left: -35px;
+}
+
+.big.yellow-shadow {
+    -webkit-box-shadow: inset 0px 0px 0px 15px #ffec7c;
+    -moz-box-shadow: inset 0px 0px 0px 15px #ffec7c;
+    box-shadow: inset 0px 0px 0px 15px #ffec7c;
+}
+
+#tempo {
+    margin-bottom: 10px;
+}
+
+#tempo-wrap {
+    margin-top: 40px;
+}
+
+#rhythm-1, #rhythm-2 {
+    width: 100px;
+    margin-right: 20px;
+}
+
+#rhythm-3 {
+    width: 100px;
+}
+
+#result {
+    margin-bottom: 20px;
+}
+
+#randomizer {
+    text-align: center;
+    background-color: green;
+    color: #ffffff;
+    font-size: 32px;
+    cursor: pointer;
+    padding: 10px 0px;
+}
+
+#randomizer p {
+    margin: 0px;
+}
