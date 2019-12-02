@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/artfolio/static/css/main.7d3e1a14.chunk.css",
+    "main.js": "/artfolio/static/js/main.8488cfac.chunk.js",
+    "main.js.map": "/artfolio/static/js/main.8488cfac.chunk.js.map",
+    "runtime~main.js": "/artfolio/static/js/runtime~main.7e57c4b6.js",
+    "runtime~main.js.map": "/artfolio/static/js/runtime~main.7e57c4b6.js.map",
+    "static/js/2.22f1469a.chunk.js": "/artfolio/static/js/2.22f1469a.chunk.js",
+    "static/js/2.22f1469a.chunk.js.map": "/artfolio/static/js/2.22f1469a.chunk.js.map",
+    "index.html": "/artfolio/index.html",
+    "precache-manifest.a05ec96d8c57095378219d49bbc6a84c.js": "/artfolio/precache-manifest.a05ec96d8c57095378219d49bbc6a84c.js",
+    "service-worker.js": "/artfolio/service-worker.js",
+    "static/css/main.7d3e1a14.chunk.css.map": "/artfolio/static/css/main.7d3e1a14.chunk.css.map",
+    "static/media/fa-user.png": "/artfolio/static/media/fa-user.80028ad2.png",
+    "static/media/special-image.png": "/artfolio/static/media/special-image.dd643e38.png",
+    "static/media/tv-header-image.png": "/artfolio/static/media/tv-header-image.d2588066.png"
+  }
+}
